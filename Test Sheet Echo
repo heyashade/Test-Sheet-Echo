@@ -61,14 +61,11 @@ try:
 except KeyboardInterrupt:
     print("Measurement stopped by user")
     
-while True:
-    sleep(2)
-    
+if True:
     h = {'content-type' : 'application/x-www-form-urlencoded'}
-    form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSfTfxMNKdGAepcyGISCoz6ynsDEdTJy9JiGha_HL5ypHgSg-g/formResponse?usp=pp_url&'
-    form_data = 'entry.1234193767=' + str(distance) + '&entry.1555660614=' + str(y)
+    form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSf69NrDhu24xhdw28xNPb_lUH6sKvyCxWVLZg6QvGB-ysEFNg/formResponse?usp=pp_url&'
+    form_data = 'entry.176825468=' + str(distance) + "cm"
     r = urequests.post(form_url, data=form_data, headers=h)
     r.status_code
     r.close()
     print("check google form")
-    break
